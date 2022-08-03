@@ -35,8 +35,8 @@ public class DataGenerator {
     }
 
     public static String getRandomLogin() {
-      String login=faker.name().name();
-      return login;
+        String login = faker.name().username();
+        return login;
     }
 
     public static String getRandomPassword() {
@@ -54,7 +54,7 @@ public class DataGenerator {
         }
 
         public static RegistrationDto getRegisteredUser(String status) {
-            var registeredUser=getUser(status);
+            var registeredUser = getUser(status);
             sendRequest(registeredUser);
             return registeredUser;
         }
